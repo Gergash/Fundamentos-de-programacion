@@ -216,7 +216,7 @@ if (a == b):
            print(" b y c con iguales")
            if(a == b == c):
               print("todos son iguales")
-
+-------------------------------------------------------------------------------
             
 # -*- coding: utf-8 -*-
 """
@@ -282,3 +282,114 @@ print("3.  Cantidad de estudiantes que reprobaron : ", cantidadEstudiantesReprob
 print(f"4.  Promedio del grupo : {promedioDefinitivaEstudiantes:.2f}")
 print("5.  Promedio de estudiantes que aprobaron : ", promedioDefinitivaEstudiantesAprobaron)
 print(f"6.  Promedio de estudiantes que reprobaron :{promedioDefinitivaEstudiantesReprobaron:.1f} ")            
+----------------------------------------------------------------------------------------------------------------
+x =  int(input('ingrese el primer numero'))
+y =  int(input('ingrese el segundo numero'))
+seleccionOp =  int(input('ingrese 1 para sumar 2 para restar 3 para multiplicar 4 para dividir 5 para potencia'))
+
+if (seleccionOp == 1):
+   r = x + y
+   print(r)
+
+if (seleccionOp == 2):
+   r = x - y
+   print(r)
+
+if (seleccionOp == 3):
+   r = x * y 
+   print(r)
+
+if (seleccionOp == 4):
+   r = x / y
+   print(r)
+
+if (seleccionOp == 5):
+   r = x ** y
+   print(r)       
+--------------------------------------------------------------
+x =  int(input('ingrese el primer numero'))
+y =  int(input('ingrese el segundo numero'))
+seleccionOp =  int(input('ingrese 1 para sumar 2 para multiplicar 3 para dividir'))
+
+if (seleccionOp == 1):
+   r = x + y
+   print(r)
+
+if (seleccionOp == 2):
+   r = x * y
+   print(r)
+
+if (seleccionOp == 3):
+   r = x / y 
+   print(r)
+----------------------------------------------------------------
+a = int(input("dime el año"))
+m = int(input("dime el mes"))
+d = int(input("dime el dia"))
+
+def comprobar_fecha(a, m, d,):
+ 
+    #Array que almacenara los dias que tiene cada mes (si el ano es bisiesto, sumaremos +1 al febrero)
+    dias_mes = [31, 28, 31, 30,31, 30, 31, 31, 30, 31, 30, 31]
+ 
+ 
+    if((a%4 == 0 and a%100 != 0) or a%400 == 0):
+        dias_mes[1] += 1
+ 
+    if(m < 1 or m > 12):
+        return False
+
+    m -= 1
+    if(d <= 0 or d > dias_mes[m]):
+        return False
+ 
+    return True
+ 
+ 
+ 
+ 
+ 
+correcta = comprobar_fecha(a, m, d,)
+ 
+#Mostrar el resultado:
+if(correcta):
+    print("\n\nLa fecha entrada es CORRECTA\n")
+ 
+else:
+    print("\n\nLa fecha entrada es FALSA\n")
+--------------------------------------------------------------------
+boton = int(input("1 para subir 2 para bajar"))
+
+
+if(boton == 1):
+    for i in range(26):
+        subir = int(input("1 para subir"))
+        if(subir == 1):
+            i = i + 1
+            print(i)
+
+if(boton == 2):    
+    for j in range(25, 1, -1):
+        subir = int(input("2 para bajar"))
+        if(boton == 2):
+            j = j - 1
+            print(j)          
+---------------------------------------------------------------------
+entrar = int(input("para entrar al asensor oprima 1"))
+
+
+if(entrar == 1):
+    for i in range(26):
+        boton = int(input("1 para subir 2 para bajar"))
+        if(boton == 1):
+            i = i + 1
+            print(i)
+        if(boton == 2):    
+            for j in range(i, 1, -1):
+                boton = int(input("2 para bajar 1 para subir"))
+                if(boton == 2):
+                    j = j - 1
+                    print(j) 
+                if(boton == 1):
+                    i = i + 1
+                    print(i)                       
