@@ -393,3 +393,43 @@ if(entrar == 1):
                 if(boton == 1):
                     i = i + 1
                     print(i)                       
+---------------------------------------------------------------------------
+print("--------calculadora de divisas--------")
+print("pesos mexicanos y colombianos")
+
+E = int(input("ingresa 1 si quieres pesos COL a MEX y 2 de MEX a COL"))
+
+if(E == 1):
+    pcol = int(input("dime la cantidad de pesos colombianos")) 
+    resultado = pcol * 0.0057
+    print("el resultado de tu calculo es " + str(resultado))
+if(E == 2):
+    pmew = float(input("dime la cantidad de pesos mexicanos"))
+    resultado = pmew * 176.54 
+    print("el resultado de tu calculo es " + str(resultado))
+-------------------------------------------------------------------------
+nom = str(input('dime tu nombre'))
+sexo =  str(input('dime tu sexo escribe M o F'))
+years =  int(input('dime tu edad'))
+
+if (years > 18):
+    print('hola ' + nom + ' de sexo ' + sexo + ' puedes votar')
+
+
+else:
+    print('lo siento no puedes votar')
+--------------------------------------------------------------------------
+num =  int(input('dime el numero para imprimir su tabla de multiplicar'))
+
+for i in range(11):
+    R = num * i
+
+    print(R)
+---------------------------------------------------------------------------
+factorial=1
+print("Dame un numero")
+x=eval (input())
+for i in range (1,x+1):
+    factorial=factorial*i
+ 
+print(factorial)
