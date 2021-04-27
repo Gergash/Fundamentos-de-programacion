@@ -433,3 +433,74 @@ for i in range (1,x+1):
     factorial=factorial*i
  
 print(factorial)
+
+----------------------------------------------------------------------------
+eleccion = int(input("elija 1 para ordenamiento burbuja, 2 para insercion y 3 para shell"))
+
+my_list = []
+for i in range(1,10):
+    lista = int(input("Ingresa los numeros"))
+    my_list.append(lista)
+ 
+if(eleccion == 1):
+    def selectionSort(aList):
+        for i in range(len(aList)):
+            least = i
+            for k in range(i+1, len(aList)):
+                if aList[k] < aList[least]:
+                    least = k
+                     
+            swap(aList, least, i)
+             
+    def swap(A, x, y):
+        temp = A[x]
+        A[x] = A[y]
+        A[y] = temp
+
+    selectionSort(my_list)
+    print(my_list)
+
+if(eleccion == 2):
+    def ordenamientoPorInsercion(my_list):
+       for indice in range(1,len(my_list)):
+
+         valorActual = my_list[indice]
+         posicion = indice
+
+         while posicion>0 and my_list[posicion-1]>valorActual:
+             my_list[posicion]=my_list[posicion-1]
+             posicion = posicion-1
+
+         my_list[posicion]=valorActual
+
+    ordenamientoPorInsercion(my_list)
+    print(my_list)
+
+
+if(eleccion == 3):
+    def ordenamientoDeShell(my_list):
+        contadorSublistas = len(my_list)//2
+        while contadorSublistas > 0:
+
+          for posicionInicio in range(contadorSublistas):
+            brechaOrdenamientoPorInsercion(my_list,posicionInicio,contadorSublistas)
+
+          print("Después de los incrementos de tamaño",contadorSublistas,
+                                       "La lista es",my_list)
+
+          contadorSublistas = contadorSublistas // 2
+
+    def brechaOrdenamientoPorInsercion(my_list,inicio,brecha):
+        for i in range(inicio+brecha,len(my_list),brecha):
+
+            valorActual = my_list[i]
+            posicion = i
+
+            while posicion>=brecha and my_list[posicion-brecha]>valorActual:
+                my_list[posicion]=my_list[posicion-brecha]
+                posicion = posicion-brecha
+
+            my_list[posicion]=valorActual
+
+    ordenamientoDeShell(my_list)
+    print(my_list)
