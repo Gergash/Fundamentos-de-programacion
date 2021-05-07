@@ -550,3 +550,22 @@ for f in range(3):
     print("La suma de los elementos es: ",sumEleMat)
     sumEleMat=0
 -------------------------------------------------------------------------------------------------------    
+#Pandas #Analisis estadistico 
+import pandas as pd 
+import matplotlib.pyplot as plt
+import numpy as np
+from sklearn.linear_model import LinearRegression
+
+processDf = pd.read_csv('processDf.csv')
+processDf.head()
+
+fig = plt.figure(figsize=(7,7))
+plt.scatter(processDf['Dias (hr)'],processDf['Total heridos'])
+plt.scatter(processDf['Dias (hr)'],processDf['Total de Dead (mb)'])
+plt.plot(processDf['Dias (hr)'],processDf['Total heridos'])
+plt.plot(processDf['Dias (hr)'],processDf['Total de Dead (mb)'])
+plt.xlabel('Dias de la manifestacion')
+plt.ylabel('Numero de afectados')
+plt.grid()
+
+--------------------------------------------------------------------------------------------------------
